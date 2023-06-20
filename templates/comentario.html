@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+      <div class="page-header">
+          <h1>{{ titulo }}</h1>
+      </div>
+      <form action="{{ url_for('comentar') }}" method="post">
+        <fieldset>
+          <div class="form-group">
+            <label for="usuario">{{ usuarionome }}</label>
+          </div>
+          <div class="form-group">
+            <label for="comentario">Comentário</label>
+            <input type="text" id="comentario" name="comentario" class="form-control" maxlength='40'>
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </fieldset>
+      </form>
+    </div>
+    <div>
+      <br>
+      <form action="{{ url_for('index') }}">
+      <button type=submit class="btn btn-primary" >Voltar</a>
+      </form>
+  </div>
+</body>
+</html>
