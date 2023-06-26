@@ -6,6 +6,15 @@
     <title>{{ titulo }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
   </head>
+  {% with messages = get_flashed_messages() %}
+      {% if messages %} 
+        <ul id="messages" class="list-unstyled">
+        {% for message in messages %}
+            <li class="alert alert-success">{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
   <body>
     <div class="container">
         <h1>Faça seu login</h1>
